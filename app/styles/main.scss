@@ -103,6 +103,7 @@ figure {
         a {
           color: #888888;
           padding: 0px 15px;
+          cursor: pointer;
 
           &:hover {
             color: #FFFFFF;
@@ -135,6 +136,8 @@ figure {
 
   .content {
     top: -115px;
+    height: auto;
+    min-height: 100%;
 
     [ng-view] {
       display: flex;

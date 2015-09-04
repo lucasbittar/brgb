@@ -36,10 +36,10 @@
 
         <div class="col-right">
           <nav>
-            <a href="#/sites" ng-class="{active : navTitle == '/sites' || navTitle == null}">Sites</a>
-            <a href="#/directory" ng-class="{active : navTitle == '/directory'}">Directory</a>
-            <a href="#">About</a>
-            <a href="#">Submit</a>
+            <a ng-click="navigation('sites')" ng-class="{active : navTitle == 'sites' || navTitle == null}">Sites</a>
+            <a ng-click="navigation('directory')" ng-class="{active : navTitle == 'directory'}">Directory</a>
+            <a ng-click="navigation('about')" ng-class="{active : navTitle == 'about'}">About</a>
+            <a ng-click="navigation('submit')" ng-class="{active : navTitle == 'submit'}">Submit</a>
             <img class="search" src="images/search-icon.svg">
           </nav>
           <div class="search"></div>
