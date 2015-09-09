@@ -6,16 +6,18 @@
 
 (function() {
 
+  'use strict';
+
   /**
    * AngularJS Setup
    */
 
   angular
-      .module('app.mainController', [])
+      .module('app')
       .controller('MainCtrl', [
         '$scope',
         '$location',
-        MainCtrl
+        mainCtrl
       ]);
 
   /**
@@ -23,16 +25,18 @@
    * @param {dependency} $scope, $location
    */
 
-  function MainCtrl($s, $location) {
-    // console.log('main');
-    // $s.navTitle = $location.path();
-    // console.log($s.navTitle);
+  function mainCtrl($s, $location) {
+
     $s.navigation = function(targetLink) {
 
       $s.navTitle = targetLink;
       $location.path('/' + targetLink, false);
 
     };
+
+    $s.navTitle = $location.path();
+    $s.navTitle = $s.navTitle.substring(1);
+
   }
 
 })();

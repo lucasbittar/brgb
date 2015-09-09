@@ -1,0 +1,11 @@
+<div class="sites-container">
+  <article class="site" ng-repeat="site in sites">
+    <div ng-click="detailSite(site.id, site.taxonomy)">
+      <figure>
+        <img ng-src="{{site.image[1].thumb}}" alt="{{site.title}}">
+      </figure>
+      <span class="site-title">{{site.title}}</span>
+      <span class="site-author">{{site.author}}</span>
+    </div>
+  </article>
+</div>

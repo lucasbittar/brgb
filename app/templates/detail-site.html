@@ -1,0 +1,32 @@
+<div class="featured-container">
+  <figure>
+    <img ng-src="{{selectedSite.image[0].full}}" alt="Amoriz">
+  </figure>
+  <h4>{{selectedSite.date | date}}</h4>
+  <h1 class="featured-title">{{selectedSite.title}}</h1>
+</div>
+
+<div class="site-detail-container">
+  <section class="desc">
+    <h2>Description</h2>
+    <p>{{selectedSite.description}}</p>
+  </section>
+  <section class="site-external">
+    <div class="col-left">
+      <h2>Credits</h2>
+      <a href="#">www.hugeinc.com</a>
+    </div>
+    <div class="col-right">
+      <h2>Tags</h2>
+      <a href="{{tag.url}}" ng-repeat="tag in selectedSite.tags">{{tag.name}}</a>
+    </div>
+  </section>
+  <section class="site-external">
+    <div class="col-left">
+      <h2>Share It</h2>
+    </div>
+    <div class="col-right">
+      <a href="#">@hugeinc</a>
+    </div>
+  </section>
+</div>

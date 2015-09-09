@@ -6,6 +6,8 @@
 
 (function() {
 
+  'use strict';
+
   /**
    * Angular setup
    */
@@ -14,17 +16,32 @@
       .module('app', [
 
         'ngAnimate',
-        'ngRoute',
-        'app.homeController',
-        'app.mainController'
+        'ngRoute'
 
       ])
+      .filter('getById', function() {
+        return function(input, id) {
+          var i = 0;
+          var len = input.length;
+          for (; i < len; i++) {
+            if (+input[i].id == +id) {
+              return input[i];
+            }
+          }
+          return null;
+        };
+      })
       .config(['$routeProvider',
-        function ($routeProvider) {
+        function($routeProvider) {
         $routeProvider
-          .when('/sites', {
+          .when('/home', {
             templateUrl: 'templates/home.html',
-            controller: 'HomeHightlightCtrl'
+            controller: 'SitesHightlightCtrl'
+          })
+          .when('/sites/:id', {
+            templateUrl: 'templates/sites.html',
+            controller: 'SitesHightlightCtrl',
+            reloadOnSearch: true
           })
           .when('/directory', {
             templateUrl: 'templates/directory.html'
@@ -39,14 +56,11 @@
             // controller: 'HomeHightlightCtrl'
           })
           .otherwise({
-            redirectTo: '/sites'
+            redirectTo: '/home'
           });
-          // .when('/', {
-          //   redirectTo: '/'
-          // });
 
-          // $locationProvider.html5Mode(false);
-          // $locationProvider.hashPrefix("!");
+        // $locationProvider.html5Mode(false);
+        // $locationProvider.hashPrefix("!");
 
       }]);
 
