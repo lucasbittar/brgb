@@ -1,6 +1,7 @@
 ---
 layout: site
 type: site
+permalink: /:categories/:title/
 title:  Vamos Plantar?
 author: HUGE
 credits: hugeinc.com
@@ -9,6 +10,6 @@ description: Huge Brazil opened in 2011 to provide the company’s full array of
 thumb: vamos-plantar.jpg
 image: vamos-plantar-full.jpg
 featured: false
-categories: site
+category: site
 tags: hotsite campaign
 ---

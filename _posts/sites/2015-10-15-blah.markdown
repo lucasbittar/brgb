@@ -1,6 +1,7 @@
 ---
 layout: site
 type: site
+permalink: /:categories/:title/
 title:  blah
 author: R/GA
 credits: rga.com
@@ -9,6 +10,6 @@ description: R/GA Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc 
 thumb: vamos-plantar.jpg
 image: vamos-plantar-full.jpg
 featured: true
-categories: site
+category: site
 tags: hotsite campaign
 ---
