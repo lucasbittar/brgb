@@ -1,8 +1,8 @@
-{% for site in site.categories.directory %}
+{% for dir in site.categories.directory %}
 <article class="directory">
-  <a href="{{ site.url | prepend: site.baseurl }}">
-    <span class="directory-title">{{ site.title }}</span>
-    <span class="directory-location">{{ site.location }}</span>
+  <a href="{{ dir.url | prepend: site.baseurl }}">
+    <span class="directory-title">{{ dir.title }}</span>
+    <span class="directory-location">{{ dir.location }}</span>
   </a>
 </article>
 {% endfor %}
