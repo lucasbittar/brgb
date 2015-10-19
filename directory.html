@@ -6,37 +6,40 @@ layout: default
 
   <section class="directory-featured col-left gray">
 
+    {% for dir in site.categories.directory limit:1 %}
   	<figure>
-  	  <div class="img-filter"></div>
-  	  <img src="{{ site.baseurl }}/images/directories/huge.png" alt="HUGE">
-  	  <span class="directory-title">HUGE</span>
-  	  <span class="directory-location">Rio de Janeiro - RJ</span>
-  	</figure>
+      <div class="img-filter"></div>
+      <img src="{{ site.baseurl }}/images/directories/{{ dir.image }}" alt="{{ dir.title }}">
+      <span class="directory-title">{{ dir.title }}</span>
+      <span class="directory-location">{{ dir.location }}</span>
+    </figure>
 
-  	<div class="directory-featured-container">
-  	  <section class="desc">
-  	    <h2>Description</h2>
-  	    <p>Huge Brazil opened in 2011 to provide the company’s full array of user-focused design, digital business transformation consulting and integrated marketing services to clients in Brazil and throughout Latin America.</p>
-  	  </section>
-  	  <section class="site-external">
-  	    <div class="col-left">
-  	      <h2>Website</h2>
-  	      <a href="#">www.hugeinc.com</a>
-  	    </div>
-  	    <div class="col-right">
-  	      <h2>Twitter</h2>
-  	      <a href="#">@hugeinc</a>
-  	    </div>
-  	  </section>
-  	  <section class="featured-websites">
-  	    <h2>Featured Websites</h2>
-  	    <div class="websites">
+    <div class="directory-featured-container">
+      <section class="desc">
+        <h2>Description</h2>
+        <p>{{ dir.description }}</p>
+      </section>
+      <section class="site-external">
+        <div class="col-left">
+          <h2>Website</h2>
+          <a href="{{ dir.website }}" target="_blank">{{ dir.website }}</a>
+        </div>
+        <div class="col-right">
+          <h2>Twitter</h2>
+          <a href="http://twitter.com/{{ dir.twitter }}" target="_blank">@{{ dir.twitter }}</a>
+        </div>
+      </section>
+      <section class="featured-websites">
+        <h2>Featured Websites</h2>
+        <div class="websites">
 
-  	      {% include sites-card.html %}
-
-  	    </div>
-  	  </section>
-  	</div>
+          {% assign author = dir.title %}
+          {% include sites-card.html author=author %}
+        
+        </div>
+      </section>
+    </div>
+    {% endfor %}
 
   </section>
 
