@@ -1,0 +1,15 @@
+# Site settings
+title: B/RGB
+email: contact@brgb.com
+description: 
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "/" # does not include hostname

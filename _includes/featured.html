@@ -1,0 +1,10 @@
+{% for site in site.categories.site %}
+  {% if site.featured %}
+	<figure>
+	  <img src="{{ site.baseurl }}images/sites/{{ site.image }}" alt="{{ site.title }}">
+	</figure>
+	<h4>Featured this month</h4>
+	<h1 class="featured-title">{{ site.title }}</h1>
+	<h2 class="featured-author">By {{ site.author }}</h2>
+  {% endif %}
+{% endfor %}

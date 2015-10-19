@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="content">
+
+  <section class="featured col-left gray">
+
+  	<div class="featured-container">
+  	  <figure>
+  	    <img src="{{ site.baseurl }}images/sites/{{ page.image }}" alt="{{ page.title }}">
+  	  </figure>
+  	  <h4>{{ page.date | date: "%b %-d, %Y" }}</h4>
+  	  <h1 class="featured-title">{{ page.title }}</h1>
+  	</div>
+
+  	<div class="site-detail-container">
+  	  <section class="desc">
+  	    <h2>Description</h2>
+  	    <p>{{ page.description }}</p>
+  	  </section>
+  	  <section class="site-external">
+  	    <div class="col-left">
+  	      <h2>Credits</h2>
+  	      <a href="http://www.{{ page.credits }}" target="_blank">www.{{ page.credits }}</a>
+  	    </div>
+  	    <div class="col-right">
+  	      <h2>Tags</h2>
+  	      {% for tag in page.tags %}
+  	      	<a href="tag">{{ tag }}</a>
+  	      {% endfor %}
+  	    </div>
+  	  </section>
+  	  <section class="site-external">
+  	    <div class="col-left">
+  	      <h2>Share It</h2>
+  	    </div>
+  	    <div class="col-right">
+  	      <a href="#">@hugeinc</a>
+  	    </div>
+  	  </section>
+  	</div>
+
+  </section>
+
+  <section class="sites col-right black">
+
+    <div class="sites-container">
+
+    	{% include sites-card.html author='all' %}
+
+    </div>
+
+  </section>
+
+</div>
+
+{{ content }}

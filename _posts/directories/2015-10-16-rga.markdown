@@ -1,0 +1,13 @@
+---
+layout: directory
+type: dir
+permalink: /:categories/:title/
+title:  R/GA
+location: São Paulo
+date:   2015-10-16 21:48:44
+description: R/GA Brazil opened in 2011 to provide the company’s full array of user-focused design, digital business transformation consulting and integrated marketing services to clients in Brazil and throughout Latin America.
+website: http://www.hugeinc.com
+twitter: hugeinc
+image: huge.png
+category: directory
+---

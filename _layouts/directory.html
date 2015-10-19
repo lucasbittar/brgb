@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="content">
+
+  <section class="directory-featured col-left gray">
+
+    <figure>
+      <div class="img-filter"></div>
+      <img src="{{ site.baseurl }}images/directories/{{ page.image }}" alt="{{ page.title }}">
+      <span class="directory-title">{{ page.title }}</span>
+      <span class="directory-location">{{ page.location }}</span>
+    </figure>
+
+    <div class="directory-featured-container">
+      <section class="desc">
+        <h2>Description</h2>
+        <p>{{ page.description }}</p>
+      </section>
+      <section class="site-external">
+        <div class="col-left">
+          <h2>Website</h2>
+          <a href="{{ page.website }}" target="_blank">{{ page.website }}</a>
+        </div>
+        <div class="col-right">
+          <h2>Twitter</h2>
+          <a href="http://twitter.com/{{ page.twitter }}" target="_blank">@{{ page.twitter }}</a>
+        </div>
+      </section>
+      <section class="featured-websites">
+        <h2>Featured Websites</h2>
+        <div class="websites">
+
+          {% assign author = page.title %}
+          {% include sites-card.html author=author %}
+        
+        </div>
+      </section>
+    </div>
+
+  </section>
+
+  <section class="directories col-right black">
+
+    <div class="directories-container">
+
+      {% include directories-card.html %}
+
+    </div>
+
+  </section>
+
+</div>

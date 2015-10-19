@@ -1,0 +1,13 @@
+{% for site in site.categories.site %}
+  {% if site.author == include.author or include.author == 'all' %}
+  <article class="site">
+    <a href="{{ site.url | prepend: site.baseurl }}">
+      <figure>
+        <img src="/images/sites/{{site.thumb}}" alt="{{ site.title }}">
+      </figure>
+      <span class="site-title">{{ site.title }}</span>
+      <span class="site-author">{{ site.author }}</span>
+    </a>
+  </article>
+  {% endif %}
+{% endfor %}

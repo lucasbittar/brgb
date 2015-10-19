@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div class="wrapper">
+
+    <header>
+
+      <div class="col-left">
+        <h1 class="logo"><img class="brand" src="/images/brand.svg" alt="B/RGB"></h1>
+        <hr/>
+      </div>
+
+      <div class="col-right">
+        <nav>
+          <a href="/" class="{% if page.url == '/' or page.url contains 'site' %} active {% endif %}">Sites</a>
+          <a href="/directory" class="{% if page.url == '/directory/' or page.url contains 'directory'%} active {% endif %}">Directory</a>
+          <a href="/about" class="{% if page.url == '/about/' %} active {% endif %}">About</a>
+          <a href="/submit">Submit</a>
+          <img class="search" src="/images/search-icon.svg">
+        </nav>
+        <div class="search"></div>
+        <hr/>
+      </div>
+
+    </header>
+
+    {{content}}
+
+  </div>
+
+  </body>
+</html>
