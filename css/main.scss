@@ -464,7 +464,8 @@ figure {
           cursor: pointer;
           transition: all 300ms ease-in-out;
 
-          &:hover {
+          &:hover,
+          &.active {
             border-bottom: 1px solid #fff;
           }
 

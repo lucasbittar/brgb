@@ -1,5 +1,5 @@
 {% for dir in site.categories.directory %}
-<article class="directory">
+<article class="directory{% if page.url contains dir.url %} active{% endif %}">
   <a href="{{ dir.url | prepend: site.baseurl }}">
     <span class="directory-title">{{ dir.title }}</span>
     <span class="directory-location">{{ dir.location }}</span>

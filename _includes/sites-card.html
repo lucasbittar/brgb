@@ -1,6 +1,6 @@
 {% for website in site.categories.site %}
   {% if website.author == include.author or include.author == 'all' %}
-  <article class="site">
+  <article class="site{% if page.url contains website.url %} active{% endif %}">
     <a href="{{ website.url | prepend: site.baseurl }}">
       <figure>
         <img src="{{ site.baseurl }}/images/sites/{{website.thumb}}" alt="{{ website.title }}">
