@@ -1,10 +1,16 @@
-{% for site in site.categories.site %}
-  {% if site.featured %}
-	<figure>
-	  <img src="{{ site.baseurl }}images/sites/{{ site.image }}" alt="{{ site.title }}">
-	</figure>
-	<h4>Featured this month</h4>
-	<h1 class="featured-title">{{ site.title }}</h1>
-	<h2 class="featured-author">By {{ site.author }}</h2>
+<div id="featured" class="owl-carousel">
+{% for feat in site.categories.site %}
+  {% if feat.featured %}
+  	<div class="featured-site">
+  		<a href="{{ feat.url | prepend: site.baseurl }}">
+			<figure>
+			  <img src="{{ feat.baseurl }}images/sites/{{ feat.image }}" alt="{{ feat.title }}">
+			</figure>
+			<h4>Featured this month</h4>
+			<h1 class="featured-title">{{ feat.title }}</h1>
+			<h2 class="featured-author">By {{ feat.author }}</h2>
+		</a>
+	</div>
   {% endif %}
 {% endfor %}
+</div>
