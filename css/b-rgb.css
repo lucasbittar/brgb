@@ -98,6 +98,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DINCondensedC';
+  src: url('../fonts/DINCondensedC.eot?#iefix') format('embedded-opentype'),  
+       url('../fonts/DINCondensedC.woff') format('woff'), 
+       url('../fonts/DINCondensedC.ttf')  format('truetype'), 
+       url('../fonts/DINCondensedC.svg#DINCondensedC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 [class*='icon-']:before{
 	display: inline-block;
    font-family: 'b rgb';
