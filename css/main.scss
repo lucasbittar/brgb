@@ -193,7 +193,7 @@ figure {
           font-family: 'CircularStd-Bold';
           font-size: 60px;
           color: #000000;
-          margin: 10px 0px 10px 0px;
+          margin: 10px 0px 40px 0px;
           letter-spacing: -.04em;
         }
 
@@ -304,7 +304,7 @@ figure {
         section {
           border-bottom: 1px solid transparentize(#000, .9);
           padding-bottom: 70px;
-          padding-top: 47px;
+          padding-top: 40px;
 
           &:last-child {
             border: none;
@@ -413,7 +413,7 @@ figure {
       section {
         border-top: 1px solid transparentize(#000, .9);
         padding-bottom: 70px;
-        padding-top: 47px;
+        padding-top: 40px;
 
         h2 {
           font-size: 12px;

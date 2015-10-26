@@ -11,5 +11,5 @@ thumb: romeo-reboot-full.jpg
 image: romeo-reboot-full.jpg
 featured: true
 category: site
-tags: hotsite campaign
+tags: hotsite, campaign
 ---

@@ -11,5 +11,5 @@ thumb: diogo-akio-full.jpg
 image: diogo-akio-full.jpg
 featured: true
 category: site
-tags: hotsite campaign
+tags: personal, portfolio
 ---

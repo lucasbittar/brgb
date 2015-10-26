@@ -5,7 +5,7 @@
  */
 
 (function() {
-	
+
 	'use strict';
 
 	/**
@@ -13,14 +13,13 @@
 	 */
 
 	$('#featured').owlCarousel({
-	
+
 	    navigation : false,
 	    slideSpeed : 800,
 	    paginationSpeed : 400,
 	    singleItem:true,
-	    autoPlay: 5000   
-	
-	});	
+	    autoPlay: 5000
 
+	});
 
 }());
