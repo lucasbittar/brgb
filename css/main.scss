@@ -494,6 +494,21 @@ figure {
       }
     }
 
+    .owl-theme .owl-controls .owl-page span {
+      background: transparent;
+      border: 1px solid #9f9f9f;
+      width: 8px;
+      height: 8px;
+      margin: 5px 5px;
+      transition: all 300ms ease-in-out;
+    }
+
+    .owl-theme .owl-controls .owl-page.active span,
+    .owl-theme .owl-controls.clickable .owl-page:hover span {
+      background: #000;
+      border: 1px solid #000;
+    }
+
   }
 
 
